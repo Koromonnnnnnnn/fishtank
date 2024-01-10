@@ -21,6 +21,7 @@ while not gameover:  # GAME LOOP################################################
         if event.type == pygame.QUIT:
             gameover = True
             
-
+    screen.blit(goldfish, (400,400))
+    
     pygame.display.flip()
     screen.fill((0, 0, 0))
