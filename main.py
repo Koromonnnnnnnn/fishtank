@@ -14,6 +14,8 @@ mixer.music.set_volume(0.5)
 mixer.music.play()
 gameover = False
 
+xvalues = [500, 700, 400, 200, 100]
+yvalues = [500, 500, 400, 200, 100]
 
 snail = pygame.image.load('snail.png')
 snail = pygame.transform.scale(snail, (100, 100))
@@ -37,11 +39,11 @@ while not gameover:
         if event.type == pygame.QUIT:
             gameover = True
 
-    screen.blit(snail, (500, 500))
-    screen.blit(eel, (700, 500))
-    screen.blit(goldfish, (400, 400))
-    screen.blit(clownfish, (200, 200))
-    screen.blit(starfish, (100, 100))
+    screen.blit(snail, (xvalues[0], yvalues[0]))
+    screen.blit(eel, (xvalues[1], yvalues[1]))
+    screen.blit(goldfish, (xvalues[2], yvalues[2]))
+    screen.blit(clownfish, (xvalues[3], yvalues[3]))
+    screen.blit(starfish, (xvalues[4], yvalues[4]))
 
     pygame.display.flip()
     screen.fill((0, 0, 0))
