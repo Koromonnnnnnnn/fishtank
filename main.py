@@ -11,6 +11,10 @@ screen.fill((0, 0, 0))
 clock = pygame.time.Clock()
 gameover = False
 
+
+snail = pygame.image.load('snail.png')
+snail = pygame.transform.scale(snail, (100, 100))
+
 eel = pygame.image.load('eel.png')
 eel = pygame.transform.scale(eel, (100, 100))
 
@@ -30,7 +34,8 @@ while not gameover:
         if event.type == pygame.QUIT:
             gameover = True
 
-    screen.blit(eel, (500, 500))
+    screen.blit(snail, (500, 500))
+    screen.blit(eel, (700, 500))
     screen.blit(goldfish, (400, 400))
     screen.blit(clownfish, (200, 200))
     screen.blit(starfish, (100, 100))
