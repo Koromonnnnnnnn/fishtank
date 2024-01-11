@@ -9,6 +9,9 @@ pygame.display.set_caption("Fishtank")
 screen = pygame.display.set_mode((800, 800))
 screen.fill((0, 0, 0))
 clock = pygame.time.Clock()
+mixer.music.load('rave.mp3')
+mixer.music.set_volume(0.5)
+mixer.music.play()
 gameover = False
 
 
