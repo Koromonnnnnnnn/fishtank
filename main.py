@@ -14,9 +14,17 @@ mixer.music.set_volume(0.5)
 mixer.music.play()
 gameover = False
 
+#storing x,y values in a list for easier access
 xvalues = [500, 700, 400, 200, 100]
 yvalues = [500, 500, 400, 200, 100]
 
+#dirrectional/speed variables
+speed_x = 5
+speed_y = 4
+
+direction = 1
+
+#Loading in all of the images
 snail = pygame.image.load('snail.png')
 snail = pygame.transform.scale(snail, (100, 100))
 
