@@ -2,6 +2,12 @@ import pygame
 import random
 from pygame import mixer
 
+from database import snail
+from database import eel
+from database import goldfish
+from database import clownfish
+from database import starfish
+
 pygame.init()
 mixer.init()
 
@@ -14,25 +20,18 @@ mixer.music.set_volume(0.5)
 mixer.music.play()
 gameover = False
 
+# CONSTANTS
+LEFT = 0
+RIGHT = 1
+UP = 2
+DOWN = 3
+
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+
 #storing x,y values in a list for easier access
 xvalues = [500, 700, 400, 200, 100]
 yvalues = [500, 500, 400, 200, 100]
-
-#Loading in all of the images
-snail = pygame.image.load('snail.png')
-snail = pygame.transform.scale(snail, (100, 100))
-
-eel = pygame.image.load('eel.png')
-eel = pygame.transform.scale(eel, (100, 100))
-
-goldfish = pygame.image.load('goldfish.png')
-goldfish = pygame.transform.scale(goldfish, (100, 100))
-
-clownfish = pygame.image.load('clownfish.png')
-clownfish = pygame.transform.scale(clownfish, (100, 100))
-
-starfish = pygame.image.load('starfish.png')
-starfish = pygame.transform.scale(starfish, (100, 100))
 
 while not gameover:
     clock.tick(60)
@@ -49,3 +48,5 @@ while not gameover:
 
     pygame.display.flip()
     screen.fill((0, 0, 0))
+    
+pygame.quit()
