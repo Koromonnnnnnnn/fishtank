@@ -74,7 +74,11 @@ while not gameOver:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             gameOver = True
+            
+    # Implemement random fish movement here
 
+    
+    # PHYSICS
     # LEFT MOVEMENT
     if keys[LEFT] == True:
         vX = -3
@@ -141,27 +145,7 @@ while not gameOver:
         if frameNum > 7:
             frameNum = 0
 
-    # COLLISION
-    if xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] > 100 and xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] < 200 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 > 750 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 < 770:
-        ypos = 750-40
-        isOnGround = True
-        vy = 0
-    elif xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] > 200 and xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] < 300 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 > 650 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 < 670:
-        ypos = 650-40
-        isOnGround = True
-        vy = 0
-    elif xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] > 300 and xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] < 400 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 > 550 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 < 570:
-        ypos = 550-40
-        isOnGround = True
-        vy = 0
-    elif xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] > 400 and xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] < 500 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 > 450 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 < 470:
-        ypos = 450-40
-        isOnGround = True
-        vy = 0
-    elif xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] > 500 and xvalues[0] and xvalues[1] and xvalues[2] and xvalues[3] and xvalues[4] < 600 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 > 350 and yvalues[0] and yvalues[1] and yvalues[2] and yvalues[3] and yvalues[4] + 40 < 370:
-        ypos = 350-40
-        isOnGround = True
-        vy = 0
+    # COLLISION HERE
 
     screen.blit(snail, (xvalues[0], yvalues[0]))
     screen.blit(eel, (xvalues[1], yvalues[1]))
