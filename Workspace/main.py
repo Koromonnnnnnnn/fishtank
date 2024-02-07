@@ -79,6 +79,7 @@ while not gameOver:
 
     
     # PHYSICS
+    
     # LEFT MOVEMENT
     if keys[LEFT] == True:
         vX = -3
@@ -110,7 +111,6 @@ while not gameOver:
     # ANIMATION-------------------------------------------------------------------
 
     # Update Animation Information
-    # Only animate when in motion
     if vX < 0:  # left animation
         ticker += 1
         if ticker % 10 == 0:  # only change frames every 10 ticks
@@ -119,7 +119,6 @@ while not gameOver:
             frameNum = 0
 
     # Update Animation Information
-    # Only animate when in motion
     if vX > 0:  # Right animation
         ticker += 1
         if ticker % 10 == 0:  # only change frames every 10 ticks
@@ -128,7 +127,6 @@ while not gameOver:
             frameNum = 0
 
     # Update Animation Information
-    # Only animate when in motion
     if vY < 0:  # DOWN animation
         ticker += 1
         if ticker % 10 == 0:  # only change frames every 10 ticks
@@ -137,7 +135,6 @@ while not gameOver:
             frameNum = 0
 
     # Update Animation Information
-    # Only animate when in motion
     if vY > 0:  # UP animation
         ticker += 1
         if ticker % 10 == 0:  # only change frames every 10 ticks
@@ -147,6 +144,7 @@ while not gameOver:
 
     # COLLISION HERE
 
+    # RENDER SECTION
     screen.blit(snail, (xvalues[0], yvalues[0]))
     screen.blit(eel, (xvalues[1], yvalues[1]))
     screen.blit(goldfish, (xvalues[2], yvalues[2]))
