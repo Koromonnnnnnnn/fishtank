@@ -180,6 +180,6 @@ if gameOver == True:
     screen.blit(text, text_rect)
     pygame.display.flip()
 
-    pygame.time.delay(2000)
+    pygame.time.delay(1000)
 
     pygame.quit()
