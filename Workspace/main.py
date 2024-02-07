@@ -62,7 +62,7 @@ RowNum = 3  # for Down animation
 frameNum = 0
 ticker = 0
 
-#storing x,y values in a list for easier access
+# storing x,y values in a list for easier access
 xvalues = [500, 700, 400, 200, 100]
 yvalues = [500, 500, 400, 200, 100]
 
@@ -72,7 +72,7 @@ while not gameOver:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             gameOver = True
-    
+
     # LEFT MOVEMENT
     if keys[LEFT] == True:
         vX = -3
@@ -138,7 +138,7 @@ while not gameOver:
             frameNum += 1
         if frameNum > 7:
             frameNum = 0
-            
+
     # COLLISION
     if xvalues > 100 and xvalues < 200 and yvalues+40 > 750 and yvalues+40 < 770:
         ypos = 750-40
@@ -160,7 +160,7 @@ while not gameOver:
         ypos = 350-40
         isOnGround = True
         vy = 0
-        
+
     xvalues += vX
     ypos += vY
 
@@ -172,7 +172,7 @@ while not gameOver:
 
     pygame.display.flip()
     screen.fill((0, 0, 0))
-    
+
 if gameOver == True:
     screen.fill(BLACK)
     font = pygame.font.Font(None, 36)
