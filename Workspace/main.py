@@ -8,7 +8,7 @@ from database import goldfish
 from database import clownfish
 from database import starfish
 
-#HI EVERYBODY!!!!!!! LIVE SHARE IS WORKING!!!! -Gus & Daniel
+# HI EVERYBODY!!!!!!! LIVE SHARE IS WORKING!!!! -Gus & Daniel
 
 pygame.init()
 mixer.init()
@@ -74,12 +74,11 @@ while not gameOver:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             gameOver = True
-            
+
     # Implemement random fish movement here
 
-    
     # PHYSICS
-    
+
     # LEFT MOVEMENT
     if keys[LEFT] == True:
         vX = -3
